@@ -7,9 +7,10 @@ function App() {
   const [tasks, dispatch] = useReducer(reducer, initialTasks);
 
   return (
-    <div className="App">
-      <h1>Todo List</h1>
-      <List tasks={tasks} dispatch={dispatch} />
+    <div className="uk-section uk-section-small">
+      <div className='uk-container uk-flex uk-flex-center'>
+        <List tasks={tasks} dispatch={dispatch} />
+      </div>
     </div>
   );
 }

@@ -12,12 +12,13 @@ export default function List(props) {
         {props.tasks.map((task) => (
           <div className="uk-margin-small" key={task.id}>
             <div className="uk-card uk-card-default uk-card-body uk-padding-small">
-              <div
+              <span className="uk-sortable-handle uk-margin-small-right" data-uk-icon="icon: table"></span>
+              <span
                 onClick={() => toggleComplete(task.id)}
                 className={`uk-text-truncate${task.completed ? ' completed' : ''}`}
               >
                 {task.item}
-              </div>
+              </span>
             </div>
           </div>
         ))}
